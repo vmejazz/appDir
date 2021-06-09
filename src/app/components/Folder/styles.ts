@@ -1,16 +1,19 @@
 import styled from "styled-components";
+import { IFolderTitle } from "../interfaces";
 import FolderClose from "./folder-close.svg";
 import FolderOpen from "./folder-open.svg";
 
-export const FolderStyled = styled.div``;
+export const FolderStyled = styled.div`
+  user-select: none; 
+`;
 
 export const ChildrenStyled = styled.div`
   margin-left: 20px;
 `;
 
-export const FolderTitle = styled.div`
+export const FolderTitle = styled.div<IFolderTitle>`
   display: flex;
-  cursor: ${({ isOpen }) => (isOpen ? "unset" : "pointer")};
+  cursor: pointer;
   color: ${({ isOpen }) => (isOpen ? "darkgray" : "unset")};
 `;
 

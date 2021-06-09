@@ -31,6 +31,11 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.ts(x?)$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(js|jsx)$/,
         use: "babel-loader",
         exclude: /node_modules/,
@@ -46,7 +51,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -62,6 +67,10 @@ const config = {
     contentBase: "./src/public",
     port: 3000,
   },
+  performance: {
+    hints: false,
+  },
+  mode: "development",
 };
 
 if (isProd) {
@@ -73,6 +82,7 @@ if (isProd) {
     //   },
     // ])
   );
+  config.mode = "production";
 }
 
 module.exports = config;

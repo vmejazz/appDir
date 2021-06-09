@@ -1,4 +1,5 @@
-import React from "react";
+import React, { FC } from "react";
+import { IItem } from "../interfaces";
 
 import { ItemStyled, FileSvg } from "./styles";
 
@@ -7,9 +8,9 @@ import { ItemStyled, FileSvg } from "./styles";
  * @param {string} title название файла
  * @returns файл с расширением, последний в цепочке файлового дерева
  */
-export const Item = ({ title }) => {
+export const Item: FC<IItem> = ({ title }) => {
   return (
-    <ItemStyled>
+    <ItemStyled onClick={(env) => env.stopPropagation()}>
       <FileSvg />
       {title}
     </ItemStyled>
