@@ -33,12 +33,12 @@ const config = {
       {
         test: /\.ts(x?)$/,
         use: "ts-loader",
-        exclude: /node_modules/,
+        exclude: ["/node_modules/", "/homeWorkFC"],
       },
       {
         test: /\.(js|jsx)$/,
         use: "babel-loader",
-        exclude: /node_modules/,
+        exclude: ["/node_modules/", "/homeWorkFC"],
       },
       {
         test: /\.html/,

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <h2>Функциональное программирование</h2>
+      <div>Для просмотра решения, открой console</div>
+    </div>
+    <div class="block">
+      <div class="left">
+        <pre id="json">
+    <code >
+      const countries = [
+  {
+    name: "Italy",
+    population: 1320,
+    neighbors: ["France"],
+    cities: [
+      {
+        name: "Rome",
+        isCapital: true,
+        population: 150,
+      },
+      {
+        name: "Milan",
+        isCapital: false,
+        population: 70,
+      },
+    ],
+  },
+  {
+    name: "Russia",
+    population: 950,
+    neighbors: ["Belarus", "Ukraine", "Kazakhstan"],
+    cities: [
+      {
+        name: "Moscow",
+        isCapital: true,
+        population: 190,
+      },
+      {
+        name: "Rostov",
+        isCapital: false,
+        population: 70,
+      },
+    ],
+  },
+  {
+    name: "France",
+    population: 600,
+    neighbors: ["Germany"],
+    cities: [
+      {
+        name: "Nizza",
+        isCapital: false,
+        population: 20,
+      },
+      {
+        name: "Paris",
+        isCapital: true,
+        population: 70,
+      },
+    ],
+  },
+  {
+    name: "Poland",
+    population: 600,
+    neighbors: ["Belarus", "Ukraine", "Germany"],
+    cities: [
+      {
+        name: "Nizza",
+        isCapital: false,
+        population: 20,
+      },
+      {
+        name: "Paris",
+        isCapital: true,
+        population: 70,
+      },
+    ],
+  },
+  {
+    name: "Germany",
+    population: 950,
+    neighbors: ["Poland", "France"],
+    cities: [
+      {
+        name: "Bavaria",
+        isCapital: false,
+        population: 70,
+      },
+    ],
+  },
+  {
+    name: "Columbia",
+    population: 74,
+    neighbors: [],
+    cities: [],
+  },
+];
+</code>
+    </pre>
+      </div>
+      <div class="right">
+        <pre id="json"><code>   
+      const tree = {
+      name: "Program Files",
+      type: "directory",
+      size: undefined,
+      children: [
+        {
+          name: "File2",
+          type: "file",
+          size: 400,
+          children: null,
+        },
+        {
+          name: "App2",
+          type: "directory",
+          size: 1200,
+          children: [
+            {
+              name: "File3",
+              type: "file",
+              size: 700,
+              children: null,
+            },
+            {
+              name: "File4",
+              type: "file",
+              size: 500,
+              children: null,
+            },
+          ],
+        },
+        {
+          name: "App3",
+          type: "directory",
+          size: 300,
+          children: [
+            {
+              name: "File5",
+              type: "file",
+              size: 300,
+              children: null,
+            },
+            {
+              name: "config",
+              type: "directory",
+              size: 900,
+              children: [
+                {
+                  name: "File6",
+                  type: "file",
+                  size: 900,
+                  children: null,
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "App3",
+          type: "directory",
+          size: 0,
+          children: [],
+        },
+      ],
+    };
+        </code></pre>
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
