@@ -1,0 +1,5 @@
+GET "http://localhost:3000/";
+
+###
+
+GET "http://164.90.161.80:3000/api/content";
